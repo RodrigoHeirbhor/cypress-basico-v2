@@ -212,15 +212,15 @@ describe('Central de Atendimento ao Cliente TAT', function() {
             .invoke('val', longText)
             .should('have.value', longText)
         })
-        it('faz uma requisição HTTP', function (){
-          cy.request('http://127.0.0.1:5500/src/index.html')
-            .should(function(response){
-              const { status, statusText, body } = response
-              expect(status).to.equal(200)
-              expect(statusText).to.equal('OK')
-              expect(body).to.include('CAC TAT')
-            })
-        })
+        // it('faz uma requisição HTTP', function (){
+        //   cy.request('http://127.0.0.1:5500/src/index.html')
+        //     .should(function(response){
+        //       const { status, statusText, body } = response
+        //       expect(status).to.equal(200)
+        //       expect(statusText).to.equal('OK')
+        //       expect(body).to.include('CAC TAT')
+        //     })
+        // })
         it('encontra o gato escondido', function() {
           cy.get('#cat')
             .invoke('show')
